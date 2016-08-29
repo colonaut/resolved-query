@@ -168,42 +168,41 @@ describe('When creating a Query instance', function () {
     });
 
     describe('with valid umber values', function () {
-
-        throw new Error('CORRECT THAT');
-
-        const resolved_schema = resolveSchema(Joi.object().keys({
+        const schema = Joi.object().keys({
             number_foo: Joi.number(),
             number_bar: Joi.number().precision(0),
             number_buzz: Joi.number()
-        }), {
-            index: ['number_foo', 'number_bar', 'number_buzz']
         });
+        const index = ['number_foo', 'number_bar', 'number_buzz'];
 
         const model = {
             number_foo: 1,
-            number_bar: 1.004,
+            number_bar: 1.002,
             number_buzz: 2
         };
 
         let query, match, error;
 
         before((done) => {
-            resolveQuery({
-                number_foo: 1,
-                number_bar: ' < 1.003',
-                number_buzz: '>=1'
-            }, resolved_schema)
-                .then((resolver_query) => {
-                    query = resolver_query;
-                    query.match(model, (err, res) => {
-                        error = err;
-                        match = res;
-                        done();
-                    });
-                })
-                .catch((err) => {
-                    error = err;
-                    done();
+            resolveSchema(schema, {index: index})
+                .then((resolved_schema) => {
+                    resolveQuery({
+                        number_foo: 1,
+                        number_bar: ' < 1.003',
+                        number_buzz: '>=1'
+                    }, resolved_schema)
+                        .then((resolver_query) => {
+                            query = resolver_query;
+                            query.match(model, (err, res) => {
+                                error = err;
+                                match = res;
+                                done();
+                            });
+                        })
+                        .catch((err) => {
+                            error = err;
+                            done();
+                        });
                 });
         });
 
@@ -211,12 +210,15 @@ describe('When creating a Query instance', function () {
         it('should value and expr return the correct values', function () {
             expect(query.value('number_foo')).to.equal(1);
             expect(query.expr('number_foo')).to.be.undefined;
+            expect(query.isNumber('number_foo')).to.be.true;
 
             expect(query.expr('number_bar')).to.equal('< 1.003');
             expect(query.value('number_bar')).to.be.undefined;
+            expect(query.isNumber('number_bar')).to.be.true;
 
             expect(query.expr('number_buzz')).to.equal('>=1');
             expect(query.value('number_buzz')).to.be.undefined;
+            expect(query.isNumber('number_buzz')).to.be.true;
 
             expect(error).to.be.null;
             expect(match).to.be.true;
