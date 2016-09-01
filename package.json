@@ -37,7 +37,7 @@
     "mocha": "^2.4.5"
   },
   "dependencies": {
-    "resolved-schema": "github:colonaut/resolved-schema#develop",
+    "resolved-schema": "file:../resolved-schema",
     "blocked": "^1.2.1",
     "joi": "^8.0.5"
   }
