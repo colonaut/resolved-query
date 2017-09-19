@@ -1,3 +1,11 @@
+## Modules
+
+<dl>
+<dt><a href="#module_resolveQuery">resolveQuery</a> ⇒ <code><a href="#ResolvedQuery">Promise.&lt;ResolvedQuery&gt;</a></code></dt>
+<dd><p>Retrieve a Promise on a ResolvedQuery instance</p>
+</dd>
+</dl>
+
 ## Classes
 
 <dl>
@@ -5,14 +13,21 @@
 <dd></dd>
 </dl>
 
-## Functions
+<a name="module_resolveQuery"></a>
 
-<dl>
-<dt><a href="#resolve">resolve(query, resolved_schema)</a> ⇒ <code><a href="#ResolvedQuery">Promise.&lt;ResolvedQuery&gt;</a></code></dt>
-<dd><p>Retrieve a Promise on a ResolvedQuery instance</p>
-</dd>
-</dl>
+## resolveQuery ⇒ <code>[Promise.&lt;ResolvedQuery&gt;](#ResolvedQuery)</code>
+Retrieve a Promise on a ResolvedQuery instance
 
+
+| Param | Type | Description |
+| --- | --- | --- |
+| query |  | The query object |
+| resolved_schema | <code>ResolvedSchema</code> |  |
+
+**Example**  
+```js
+const resolveQuery = require('resloved-query');resolveQuery({}). then(). catch()
+```
 <a name="ResolvedQuery"></a>
 
 ## ResolvedQuery
@@ -88,16 +103,4 @@
 | Param |
 | --- |
 | key | 
-
-<a name="resolve"></a>
-
-## resolve(query, resolved_schema) ⇒ <code>[Promise.&lt;ResolvedQuery&gt;](#ResolvedQuery)</code>
-Retrieve a Promise on a ResolvedQuery instance
-
-**Kind**: global function  
-
-| Param | Type |
-| --- | --- |
-| query |  | 
-| resolved_schema | <code>ResolvedSchema</code> | 
 
