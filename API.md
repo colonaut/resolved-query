@@ -1,0 +1,189 @@
+## Classes
+
+<dl>
+<dt><a href="#ResolvedQuery">ResolvedQuery</a></dt>
+<dd></dd>
+</dl>
+
+## Constants
+
+<dl>
+<dt><a href="#ResolvedQuery">ResolvedQuery</a></dt>
+<dd><p>Created by kalle on 01.09.2016.</p>
+</dd>
+</dl>
+
+## Functions
+
+<dl>
+<dt><a href="#resolve">resolve(query, resolved_schema)</a> ⇒ <code><a href="#ResolvedQuery">Promise.&lt;ResolvedQuery&gt;</a></code></dt>
+<dd><p>Retrieve a Promise on a ResolvedQuery instance</p>
+</dd>
+</dl>
+
+<a name="ResolvedQuery"></a>
+
+## ResolvedQuery
+**Kind**: global class  
+
+* [ResolvedQuery](#ResolvedQuery)
+    * [new ResolvedQuery(query_data, keys)](#new_ResolvedQuery_new)
+    * [.isNumber(key)](#ResolvedQuery+isNumber) ⇒ <code>boolean</code>
+    * [.isArray(key)](#ResolvedQuery+isArray) ⇒ <code>boolean</code>
+    * [.match(model, callback)](#ResolvedQuery+match) ⇒ <code>boolean</code>
+    * [.keys()](#ResolvedQuery+keys) ⇒ <code>Array</code>
+    * [.value(key)](#ResolvedQuery+value) ⇒ <code>Array</code> &#124; <code>String</code> &#124; <code>Number</code>
+    * [.expr(key)](#ResolvedQuery+expr) ⇒ <code>string</code>
+
+<a name="new_ResolvedQuery_new"></a>
+
+### new ResolvedQuery(query_data, keys)
+
+| Param | Type | Description |
+| --- | --- | --- |
+| query_data | <code>Object</code> | Result of the resolve function |
+| keys | <code>Array.&lt;string&gt;</code> |  |
+
+<a name="ResolvedQuery+isNumber"></a>
+
+### resolvedQuery.isNumber(key) ⇒ <code>boolean</code>
+**Kind**: instance method of <code>[ResolvedQuery](#ResolvedQuery)</code>  
+
+| Param | Type |
+| --- | --- |
+| key | <code>string</code> | 
+
+<a name="ResolvedQuery+isArray"></a>
+
+### resolvedQuery.isArray(key) ⇒ <code>boolean</code>
+**Kind**: instance method of <code>[ResolvedQuery](#ResolvedQuery)</code>  
+
+| Param | Type |
+| --- | --- |
+| key | <code>string</code> | 
+
+<a name="ResolvedQuery+match"></a>
+
+### resolvedQuery.match(model, callback) ⇒ <code>boolean</code>
+**Kind**: instance method of <code>[ResolvedQuery](#ResolvedQuery)</code>  
+
+| Param | Type |
+| --- | --- |
+| model | <code>object</code> | 
+| callback | <code>function</code> | 
+
+<a name="ResolvedQuery+keys"></a>
+
+### resolvedQuery.keys() ⇒ <code>Array</code>
+**Kind**: instance method of <code>[ResolvedQuery](#ResolvedQuery)</code>  
+**Returns**: <code>Array</code> - The keys of the query  
+<a name="ResolvedQuery+value"></a>
+
+### resolvedQuery.value(key) ⇒ <code>Array</code> &#124; <code>String</code> &#124; <code>Number</code>
+**Kind**: instance method of <code>[ResolvedQuery](#ResolvedQuery)</code>  
+**Returns**: <code>Array</code> &#124; <code>String</code> &#124; <code>Number</code> - The given query pattern for key  
+
+| Param |
+| --- |
+| key | 
+
+<a name="ResolvedQuery+expr"></a>
+
+### resolvedQuery.expr(key) ⇒ <code>string</code>
+**Kind**: instance method of <code>[ResolvedQuery](#ResolvedQuery)</code>  
+**Returns**: <code>string</code> - expression  
+
+| Param |
+| --- |
+| key | 
+
+<a name="ResolvedQuery"></a>
+
+## ResolvedQuery
+Created by kalle on 01.09.2016.
+
+**Kind**: global constant  
+
+* [ResolvedQuery](#ResolvedQuery)
+    * [new ResolvedQuery(query_data, keys)](#new_ResolvedQuery_new)
+    * [.isNumber(key)](#ResolvedQuery+isNumber) ⇒ <code>boolean</code>
+    * [.isArray(key)](#ResolvedQuery+isArray) ⇒ <code>boolean</code>
+    * [.match(model, callback)](#ResolvedQuery+match) ⇒ <code>boolean</code>
+    * [.keys()](#ResolvedQuery+keys) ⇒ <code>Array</code>
+    * [.value(key)](#ResolvedQuery+value) ⇒ <code>Array</code> &#124; <code>String</code> &#124; <code>Number</code>
+    * [.expr(key)](#ResolvedQuery+expr) ⇒ <code>string</code>
+
+<a name="new_ResolvedQuery_new"></a>
+
+### new ResolvedQuery(query_data, keys)
+
+| Param | Type | Description |
+| --- | --- | --- |
+| query_data | <code>Object</code> | Result of the resolve function |
+| keys | <code>Array.&lt;string&gt;</code> |  |
+
+<a name="ResolvedQuery+isNumber"></a>
+
+### resolvedQuery.isNumber(key) ⇒ <code>boolean</code>
+**Kind**: instance method of <code>[ResolvedQuery](#ResolvedQuery)</code>  
+
+| Param | Type |
+| --- | --- |
+| key | <code>string</code> | 
+
+<a name="ResolvedQuery+isArray"></a>
+
+### resolvedQuery.isArray(key) ⇒ <code>boolean</code>
+**Kind**: instance method of <code>[ResolvedQuery](#ResolvedQuery)</code>  
+
+| Param | Type |
+| --- | --- |
+| key | <code>string</code> | 
+
+<a name="ResolvedQuery+match"></a>
+
+### resolvedQuery.match(model, callback) ⇒ <code>boolean</code>
+**Kind**: instance method of <code>[ResolvedQuery](#ResolvedQuery)</code>  
+
+| Param | Type |
+| --- | --- |
+| model | <code>object</code> | 
+| callback | <code>function</code> | 
+
+<a name="ResolvedQuery+keys"></a>
+
+### resolvedQuery.keys() ⇒ <code>Array</code>
+**Kind**: instance method of <code>[ResolvedQuery](#ResolvedQuery)</code>  
+**Returns**: <code>Array</code> - The keys of the query  
+<a name="ResolvedQuery+value"></a>
+
+### resolvedQuery.value(key) ⇒ <code>Array</code> &#124; <code>String</code> &#124; <code>Number</code>
+**Kind**: instance method of <code>[ResolvedQuery](#ResolvedQuery)</code>  
+**Returns**: <code>Array</code> &#124; <code>String</code> &#124; <code>Number</code> - The given query pattern for key  
+
+| Param |
+| --- |
+| key | 
+
+<a name="ResolvedQuery+expr"></a>
+
+### resolvedQuery.expr(key) ⇒ <code>string</code>
+**Kind**: instance method of <code>[ResolvedQuery](#ResolvedQuery)</code>  
+**Returns**: <code>string</code> - expression  
+
+| Param |
+| --- |
+| key | 
+
+<a name="resolve"></a>
+
+## resolve(query, resolved_schema) ⇒ <code>[Promise.&lt;ResolvedQuery&gt;](#ResolvedQuery)</code>
+Retrieve a Promise on a ResolvedQuery instance
+
+**Kind**: global function  
+
+| Param | Type |
+| --- | --- |
+| query |  | 
+| resolved_schema | <code>ResolvedSchema</code> | 
+
