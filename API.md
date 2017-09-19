@@ -26,7 +26,7 @@ Retrieve a Promise on a ResolvedQuery instance
 
 **Example**  
 ```js
-const resolveQuery = require('resloved-query');resolveQuery({}). then(). catch()
+const resolveQuery = require('resolved-query');//usage as promiseresolveQuery({}) .then(resolved_query) .catch(err)//usage with callbackresolveQuery({}, (err, resolved_query) => {})
 ```
 <a name="ResolvedQuery"></a>
 
