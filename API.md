@@ -18,16 +18,23 @@
 ## resolveQuery ⇒ <code>[Promise.&lt;ResolvedQuery&gt;](#ResolvedQuery)</code>
 Retrieve a Promise on a ResolvedQuery instance
 
+**Returns**: <code>[Promise.&lt;ResolvedQuery&gt;](#ResolvedQuery)</code> - Only, if no callback is given  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | query |  | The query object |
 | resolved_schema | <code>ResolvedSchema</code> |  |
-| [callback] | <code>function</code> |  |
+| [callback] | <code>function</code> | (Error, ResolvedQuery) |
 
 **Example**  
 ```js
-const resolveQuery = require('resolved-query');//usage as promiseresolveQuery({}) .then(resolved_query) => {...} .catch(err) => {...}//usage with callbackresolveQuery({}, (err, resolved_query) => {...})
+const resolveQuery = require('resolved-query');
+//usage as promise
+resolveQuery({})
+ .then(resolved_query) => {...}
+ .catch(err) => {...}
+//usage with callback
+resolveQuery({}, (err, resolved_query) => {...})
 ```
 <a name="ResolvedQuery"></a>
 
