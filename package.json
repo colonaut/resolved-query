@@ -1,6 +1,6 @@
 {
   "name": "resolved-query",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A ResolvedQuery allows to match a model or filter an array of models against a query object",
   "main": "index.js",
   "directories": {
@@ -37,8 +37,8 @@
     "mocha": "^2.4.5"
   },
   "dependencies": {
-    "resolved-schema": "file:../resolved-schema",
     "blocked": "^1.2.1",
-    "joi": "^8.0.5"
+    "joi": "^13.0.2",
+    "resolved-schema": "file:../resolved-schema"
   }
 }
